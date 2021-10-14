@@ -38,7 +38,7 @@ async def on_message(message):
             activeChannel = client.get_channel(channelID)
 
             # Get the most recent messages and put them into a list
-            messageLog = await activeChannel.history(limit = 1000, oldest_first = False).flatten()
+            messageLog = await activeChannel.history(limit = 50, oldest_first = False).flatten()
 
             # Remove the current message to avoid counting it as a repost
             messageLog.pop(0)
